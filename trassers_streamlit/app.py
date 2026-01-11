@@ -16,14 +16,14 @@ st.set_page_config(page_title="Well Classifier", page_icon="🛢️", layout="wi
 def load_assets():
     try:
         data = {
-            'model1': joblib.load('models/first_model_3class.pkl'),
-            'model2': joblib.load('models/second_model_binary.pkl'),
-            'shap1': joblib.load('models/shap_explainer_3class.pkl'),
-            'shap2': joblib.load('models/shap_explainer_binary.pkl'),
-            'demo_first': joblib.load('models/demo_dataset.pkl'),
-            'demo': joblib.load('models/demo_bundle.pkl'),
+            'model1': joblib.load('first_model_3class.pkl'),
+            'model2': joblib.load('second_model_binary.pkl'),
+            'shap1': joblib.load('shap_explainer_3class.pkl'),
+            'shap2': joblib.load('shap_explainer_binary.pkl'),
+            'demo_first': joblib.load('demo_dataset.pkl'),
+            'demo': joblib.load('demo_bundle.pkl'),
         }
-        with open('models/metrics.json', 'r') as f:
+        with open('metrics.json', 'r') as f:
             data['metrics'] = json.load(f)
         return data
     except Exception as e:
