@@ -7,6 +7,11 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import shap
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import os
+
+# Получаем путь к папке, в которой лежит текущий файл app.py
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 # НАСТРОЙКИ СТРАНИЦЫ 
 st.set_page_config(page_title="Well Classifier", page_icon="🛢️", layout="wide")
@@ -15,15 +20,19 @@ st.set_page_config(page_title="Well Classifier", page_icon="🛢️", layout="wi
 @st.cache_resource
 def load_assets():
     try:
+        # Функция для сборки полного пути
+        def get_path(filename):
+            return os.path.join(BASE_DIR, filename)
+
         data = {
-            'model1': joblib.load('first_model_3class.pkl'),
-            'model2': joblib.load('second_model_binary.pkl'),
-            'shap1': joblib.load('shap_explainer_3class.pkl'),
-            'shap2': joblib.load('shap_explainer_binary.pkl'),
-            'demo_first': joblib.load('demo_dataset.pkl'),
-            'demo': joblib.load('demo_bundle.pkl'),
+            'model1': joblib.load(get_path('first_model_3class.pkl')),
+            'model2': joblib.load(get_path('second_model_binary.pkl')),
+            'shap1': joblib.load(get_path('shap_explainer_3class.pkl')),
+            'shap2': joblib.load(get_path('shap_explainer_binary.pkl')),
+            'demo_first': joblib.load(get_path('demo_dataset.pkl')),
+            'demo': joblib.load(get_path('demo_bundle.pkl')),
         }
-        with open('metrics.json', 'r') as f:
+        with open(get_path('metrics.json'), 'r') as f:
             data['metrics'] = json.load(f)
         return data
     except Exception as e:
