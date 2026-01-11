@@ -1,6 +1,6 @@
 # 🛢️ **Система отбора скважин-кандидатов для технологии СПС**
 
-[![Streamlit App](https://img.icons8.com/?size=100&id=Rffi8qeb2fK5&format=png&color=000000)](https://cdwxg7lw833to68wt9cpbb.streamlit.app/)
+[![Streamlit App](https://www.chaosgenius.io/blog/content/images/2024/10/streamlit-in-snowflake-1.png)](https://cdwxg7lw833to68wt9cpbb.streamlit.app/)
 
 ### 📄 **Аннотация проекта**
 
