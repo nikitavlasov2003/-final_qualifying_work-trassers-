@@ -3,7 +3,9 @@
 <a href="https://cdwxg7lw833to68wt9cpbb.streamlit.app/">
   <img src="https://res.cloudinary.com/dauffqawe/image/upload/c_limit,w_3840/f_auto/q_auto/v1/streamlit-logo-primary-colormark-darktext_binn9p?_a=BAVAZGDX0" width="120" style="vertical-align:middle">
 </a>
-<b>⇦ Нажмите, чтобы открыть интерактивный дашборд</b>
+<a href="https://ваш-адрес.streamlit.app/" style="text-decoration:none; color:inherit; vertical-align:middle;">
+  <b> ← Нажмите, чтобы открыть интерактивный дашборд</b>
+</a>
 
 ### 📄 **Аннотация проекта**
 
